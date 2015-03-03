@@ -61,7 +61,8 @@ module AdsCommon
 
     # Creates and sets up Savon client.
     def create_savon_client(endpoint, namespace)
-      Nori.advanced_typecasting = false
+      #Nori.advanced_typecasting = false
+      Nori.new(:advanced_typecasting => false)
       client = Savon::Client.new do |wsdl, httpi|
         wsdl.endpoint = endpoint
         wsdl.namespace = namespace
