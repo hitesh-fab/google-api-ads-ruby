@@ -38,6 +38,6 @@ Gem::Specification.new do |s|
   s.files = Dir.glob('{lib,test}/**/*') + %w(COPYING README.md ChangeLog)
   s.test_files = Dir.glob('test/test_*.rb')
   s.add_dependency('savon', '~> 2.3')
-  s.add_dependency('httpi', '~> 1.1.0')
+  s.add_dependency('httpi', '~> 2.1')
   s.add_dependency('signet', '~> 0.5.0')
 end
