@@ -19,7 +19,9 @@
 #
 # Code template for registry generation for Savon backend
 
-require 'savon'
+common = File.expand_path('../../../../', __FILE__)
+$:.unshift common unless $:.include?(common)
+require 'lib/savon'
 require 'ads_common/build/savon_abstract_generator'
 require 'pp'
 

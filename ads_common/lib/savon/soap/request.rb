@@ -1,4 +1,6 @@
-require "httpi"
+common = File.expand_path('../../../../', __FILE__)
+$:.unshift common unless $:.include?(common)
+require "lib/httpi"
 require "savon/soap/response"
 
 module Savon

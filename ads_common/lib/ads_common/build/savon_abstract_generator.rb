@@ -19,7 +19,9 @@
 #
 # Code template generator base class
 
-require 'savon'
+common = File.expand_path('../../../../', __FILE__)
+$:.unshift common unless $:.include?(common)
+require 'lib/savon'
 require 'erb'
 
 module AdsCommon

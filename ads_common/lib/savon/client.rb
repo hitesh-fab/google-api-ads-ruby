@@ -1,5 +1,7 @@
 require "wasabi/document"
-require "httpi/request"
+common = File.expand_path('../../../', __FILE__)
+$:.unshift common unless $:.include?(common)
+require "lib/httpi/request"
 require "akami"
 
 require "savon/soap/xml"

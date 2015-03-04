@@ -19,7 +19,9 @@
 #
 # Base class for handlers of SOAP headers.
 
-require 'savon'
+common = File.expand_path('../../../../', __FILE__)
+$:.unshift common unless $:.include?(common)
+require 'lib/savon'
 
 module AdsCommon
   module SavonHeaders

@@ -23,7 +23,7 @@ $:.unshift lib unless $:.include?(lib)
 require 'ads_common/version'
 
 Gem::Specification.new do |s|
-  s.name = 'google-ads-common'
+  s.name = 'google-ads-common-v2'
   s.version = AdsCommon::ApiConfig::CLIENT_LIB_VERSION
   s.summary = 'Common code for Google Ads APIs'
   s.description = 'Essential utilities shared by all Ads Ruby client libraries'
@@ -33,11 +33,9 @@ Gem::Specification.new do |s|
   s.license = 'Apache-2.0'
   s.platform = Gem::Platform::RUBY
   s.required_rubygems_version = '>= 1.3.6'
-  s.rubyforge_project = 'google-ads-common'
+  s.rubyforge_project = 'google-ads-common-v2'
   s.require_path = 'lib'
-  s.files = Dir.glob('{lib,test}/**/*') + %w(COPYING README.md ChangeLog)
+  s.files = Dir.glob('{lib,test}/**/*') + %w(README.md)
   s.test_files = Dir.glob('test/test_*.rb')
-  # s.add_dependency('savon', '~> 1.2.0')
-  s.add_dependency('httpi', '~> 1.1.0')
   s.add_dependency('signet', '~> 0.5.0')
 end

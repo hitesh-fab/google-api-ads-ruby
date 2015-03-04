@@ -20,7 +20,9 @@
 # Generates the wrappers for API services. Only used during the
 # 'rake generate' step of library setup.
 
-require 'savon'
+common = File.expand_path('../../../../', __FILE__)
+$:.unshift common unless $:.include?(common)
+require 'lib/savon'
 
 require 'ads_common/build/savon_service_generator'
 require 'ads_common/build/savon_registry'

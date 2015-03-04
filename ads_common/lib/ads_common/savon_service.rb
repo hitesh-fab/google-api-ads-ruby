@@ -19,7 +19,9 @@
 #
 # Base class for all generated API services based on Savon backend.
 
-require 'savon'
+common = File.expand_path('../../../', __FILE__)
+$:.unshift common unless $:.include?(common)
+require 'lib/savon'
 
 require 'ads_common/http'
 require 'ads_common/parameters_validator'

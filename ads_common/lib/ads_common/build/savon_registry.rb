@@ -20,7 +20,9 @@
 # Registry object for Savon backend. Used on generation step as parsed
 # representation of WSDL for API stubs generation.
 
-require 'savon'
+common = File.expand_path('../../../../', __FILE__)
+$:.unshift common unless $:.include?(common)
+require 'lib/savon'
 require 'rexml/document'
 
 require 'ads_common/utils'
